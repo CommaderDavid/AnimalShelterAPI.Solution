@@ -10,5 +10,13 @@ namespace AnimalAPI.Models
           : base(options)
         {
         }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<Animal>()
+              .HasData(
+                new Animal { AnimalId = 1, Name = "Malinda", Type = "Dog", Gender = "Female", Behavior = "Wonderful and sublime. Fantastic around kids.", DateAdded = "April 2, 2009" }
+            );
+        }
     }
 }

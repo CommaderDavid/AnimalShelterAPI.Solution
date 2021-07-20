@@ -17,6 +17,6 @@ namespace AnimalAPI.Models
         [Required]
         public string Behavior { get; set; }
         [Required]
-        public int DateAdded { get; set; }
+        public string DateAdded { get; set; }
     }
 }
